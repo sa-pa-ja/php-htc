@@ -14,3 +14,25 @@ PHP is a dynamically typed language, which means that by default there is no nee
 
 However, it is possible to statically type some aspect of the language via the use of type declaration. Different types that are supported bby php's type system can be found at the type system page.
 
+```php
+$bool = false;
+$integer = 500;
+$floating = 50.56676;
+$string = "Hello my love Lucy";
+
+echo get_debug_type($bool), "\n";
+echo get_debug_type($string), "\n"
+
+// If this is an integer, increment it by four
+
+if(is_int($integer)) {
+    $integer += 500;
+}
+
+
+var_dump($integer);
+
+```
+
+>**Note**
+>Prior to PHP 8.0.0 where the `get_debug_type()` is not available, the `getype()` function can be used instead. However, it doesn't use the canonical type names.
